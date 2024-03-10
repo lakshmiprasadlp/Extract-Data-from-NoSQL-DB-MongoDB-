@@ -2,7 +2,7 @@ import pandas as pd
 import pymongo
 import urllib.parse
 
-from lp_pymango.var.variables import username, password, dbname, colname
+from lp_pymango.var.variables import *# username, password, dbname, colname
 
 # Escape the username and password
 escaped_username = urllib.parse.quote_plus(username)
@@ -23,7 +23,8 @@ documents = collection.find()
 df = pd.DataFrame(documents)
 
 # Specify the full file path including the filename where you want to save the CSV file
-csv_file_path = download_file_path
+csv_file_path = downlode_file_path
+
 
 # Save the DataFrame to a CSV file
 df.to_csv(csv_file_path, index=False)
